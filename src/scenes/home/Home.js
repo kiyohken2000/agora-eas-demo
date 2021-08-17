@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { Text, View, ScrollView, StatusBar, useColorScheme } from 'react-native'
+import { Text, View, ScrollView, StatusBar, useColorScheme, Button } from 'react-native'
 import styles from './styles'
 import { firebase } from '../../firebase/config'
+import { useNavigation } from '@react-navigation/native'
 
 export default function Home(props) {
   const userData = props.extraData
   const [token, setToken] = useState('')
   const scheme = useColorScheme()
+  const navigation = useNavigation()
 
   useEffect(() => {
     firebase.firestore()
@@ -34,6 +36,9 @@ export default function Home(props) {
           <Text style={scheme === 'dark' ? styles.darktitle : styles.title}>{userData.email}</Text>
           <Text style={scheme === 'dark' ? styles.darkfield : styles.field}>Expo push token:</Text>
           <Text style={scheme === 'dark' ? styles.darktitle : styles.title}>{token.token}</Text>
+          <Button title={'Go Stream'} onPress={() => {
+            navigation.navigate('Stream')
+          }} />
         </ScrollView>
       </View>
     </View>

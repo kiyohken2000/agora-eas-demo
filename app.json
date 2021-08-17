@@ -26,7 +26,9 @@
       "bundleIdentifier": "net.votepurchase.agoraeasdemo",
       "buildNumber": "1.0.0",
       "infoPlist": {
-        "NSPhotoLibraryUsageDescription": "Use the photo library to change your avatar."
+        "NSPhotoLibraryUsageDescription": "Use the photo library to change your avatar.",
+        "NSCameraUsageDescription": "Use for video call.",
+        "NSMicrophoneUsageDescription": "Use for video call."
       },
       "userInterfaceStyle": "automatic"
     },

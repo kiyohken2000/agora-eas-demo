@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 import Login from '../../../scenes/login'
 import Registration from '../../../scenes/registration'
 import Home from '../../../scenes/home'
+import Stream from '../../../scenes/stream'
 import Profile from '../../../scenes/profile'
 import Detail from '../../../scenes/details'
 
@@ -40,6 +41,9 @@ export const HomeNavigator = (props) => {
     <Stack.Navigator headerMode="screen" screenOptions={navigationProps}>
       <Stack.Screen name="Home">
         {props => <Home {...props} extraData={user} />}
+      </Stack.Screen>
+      <Stack.Screen name="Stream">
+        {props => <Stream {...props} extraData={user} />}
       </Stack.Screen>
     </Stack.Navigator>
   )

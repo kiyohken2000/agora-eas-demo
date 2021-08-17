@@ -1,10 +1,9 @@
 {
   "private": true,
-  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
     "web": "expo start --web",
     "eject": "expo eject",
     "lint": "node_modules/.bin/eslint src/ --fix src/ --fix",
@@ -17,6 +16,7 @@
     "@react-navigation/native": "^5.8.10",
     "@react-navigation/stack": "^5.12.8",
     "@reduxjs/toolkit": "^1.5.1",
+    "agora-rn-uikit": "^3.3.0",
     "axios": "^0.21.1",
     "base-64": "^1.0.0",
     "expo": "^42.0.0",
@@ -27,6 +27,9 @@
     "expo-image-manipulator": "~9.2.2",
     "expo-image-picker": "~10.2.2",
     "expo-notifications": "~0.12.2",
+    "expo-splash-screen": "~0.11.2",
+    "expo-status-bar": "~1.0.4",
+    "expo-updates": "~0.8.1",
     "fiction-expo-restart": "^1.0.9",
     "firebase": "8.2.3",
     "global": "^4.4.0",
@@ -34,7 +37,8 @@
     "prop-types": "^15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
+    "react-native": "~0.63.4",
+    "react-native-agora": "^3.4.6",
     "react-native-dialog": "^8.0.1",
     "react-native-elements": "^3.4.2",
     "react-native-gesture-handler": "~1.10.2",
@@ -45,6 +49,7 @@
     "react-native-screens": "~3.4.0",
     "react-native-svg": "12.1.1",
     "react-native-svg-transformer": "^0.14.3",
+    "react-native-unimodules": "~0.14.5",
     "react-native-vector-icons": "^6.6.0",
     "react-native-web": "~0.13.12",
     "react-redux": "^7.1.1",
@@ -52,6 +57,7 @@
     "redux-logger": "^3.0.6"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.0",
     "babel-eslint": "^10.1.0",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-preset-expo": "8.3.0",
@@ -84,5 +90,7 @@
       "yarn lint",
       "yarn test"
     ]
-  }
+  },
+  "name": "agora-eas-demo",
+  "version": "1.0.0"
 }
